@@ -9,6 +9,10 @@ import Foundation
 
 @dynamicMemberLookup
 public struct PopoverModel<Object>: Identifiable {
+    public init(object: Object) {
+        self.object = object
+    }
+    
     public let id = UUID()
     public let object: Object
     
