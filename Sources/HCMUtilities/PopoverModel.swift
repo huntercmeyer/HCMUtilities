@@ -8,11 +8,11 @@
 import Foundation
 
 @dynamicMemberLookup
-struct PopoverModel<Object>: Identifiable {
-    let id = UUID()
-    let object: Object
+public struct PopoverModel<Object>: Identifiable {
+    public let id = UUID()
+    public let object: Object
     
-    subscript<T>(dynamicMember keyPath: KeyPath<Object, T>) -> T {
+    public subscript<T>(dynamicMember keyPath: KeyPath<Object, T>) -> T {
         self.object[keyPath: keyPath]
     }
 }
